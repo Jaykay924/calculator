@@ -6,17 +6,40 @@ namespace MyCalculator
     {
         static void Main(string[] args)
         {
-            
-        int zero = 0;
-        int one = 1;
-        int two = 2;
-        int three = 3;
-        int four = 4;
-        int five = 5;
-        int six = 6;
-        int seven = 7;
-        int eight = 8;
-        int nine = 9;
+    
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        char operation = Convert.ToChar(Console.ReadLine());
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        switch(operation)
+            {
+                case '+':
+                    Console.WriteLine(num1 + num2);
+                    break;
+
+                    case '-':
+                    Console.WriteLine(num1 - num2);
+                    break;
+
+                case '*':
+                    Console.WriteLine(num1 * num2);
+                    break;
+
+                case '/':
+                    if(num2 != 0)
+                    {
+                        Console.WriteLine(num1 / num2);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: Division by zero is not allowed.");
+                    }
+                    break;
+                    
+                
+            }
+        
+        
 
        }
     }
